@@ -1,5 +1,7 @@
+
+import "reflect-metadata"; //Reflect metadata should be imported first before any other imports
 import { Container } from 'inversify';
-import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
+import { InversifyExpressServer } from 'inversify-express-utils';
 import { urlencoded, json } from 'body-parser';
 
 const container = new Container();
@@ -14,3 +16,4 @@ server.setConfig((app) => {
 
 let app = server.build();
 app.listen(3000)
+
